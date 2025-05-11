@@ -1,11 +1,12 @@
 {
   "Version": 1,
-  "Hash": "qx5tm34VZZJTmyTEaWEyXCidXBX94T1qB89KaJdlrJ4=",
+  "Hash": "IHulorPEKAhNPKctgckuPqJWUFb9OpNzycbBHRzLE8k=",
   "Source": "depiBackend",
   "BasePath": "_content/depiBackend",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
   "DiscoveryPatterns": [],
-  "Assets": []
+  "Assets": [],
+  "Endpoints": []
 }

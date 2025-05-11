@@ -1,3 +1,4 @@
+using System.ComponentModel;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Authentication.BearerToken;
  
@@ -10,6 +11,7 @@ using Microsoft.AspNetCore.Http.Features;
 using depiBackend.Data;
 using depiBackend.Data.IRepository;
 using depiBackend.Models;
+using depiBackend.Extensions;
 
 
 var builder = WebApplication.CreateBuilder(args);
@@ -92,6 +94,10 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
+
+//AddingNewEventArgs exceptions 
+app.UseGlobalExceptionHandling();
 
 app.UseHttpsRedirection();
 
