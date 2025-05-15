@@ -18,6 +18,7 @@ namespace depiBackend.Data
         public DbSet<Order> Orders { get; set; }
 
         public DbSet<OrderDetail> OrderDetails { get; set; }
+        public object Carts { get; set; }
 
 
         //protected override void OnModelCreating(ModelBuilder modelBuilder)

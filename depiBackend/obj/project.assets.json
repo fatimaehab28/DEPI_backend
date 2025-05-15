@@ -4161,9 +4161,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Royal\\Source\\Repos\\DEPI_backend\\depiBackend\\depiBackend.csproj",
+      "projectUniqueName": "C:\\Users\\Royal\\source\\repos\\DEPI_backend\\depiBackend\\depiBackend.csproj",
       "projectName": "depiBackend",
-      "projectPath": "C:\\Users\\Royal\\Source\\Repos\\DEPI_backend\\depiBackend\\depiBackend.csproj",
+      "projectPath": "C:\\Users\\Royal\\source\\repos\\DEPI_backend\\depiBackend\\depiBackend.csproj",
       "packagesPath": "C:\\Users\\Royal\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\Royal\\Source\\Repos\\DEPI_backend\\depiBackend\\obj\\",
       "projectStyle": "PackageReference",
@@ -4186,14 +4186,14 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\Royal\\Source\\Repos\\DEPI_backend\\Depi.DataAccess\\Depi.DataAccess.csproj": {
-              "projectPath": "C:\\Users\\Royal\\Source\\Repos\\DEPI_backend\\Depi.DataAccess\\Depi.DataAccess.csproj"
+            "C:\\Users\\Royal\\source\\repos\\DEPI_backend\\Depi.DataAccess\\Depi.DataAccess.csproj": {
+              "projectPath": "C:\\Users\\Royal\\source\\repos\\DEPI_backend\\Depi.DataAccess\\Depi.DataAccess.csproj"
             },
-            "C:\\Users\\Royal\\Source\\Repos\\DEPI_backend\\Depi.Models\\Depi.Models.csproj": {
-              "projectPath": "C:\\Users\\Royal\\Source\\Repos\\DEPI_backend\\Depi.Models\\Depi.Models.csproj"
+            "C:\\Users\\Royal\\source\\repos\\DEPI_backend\\Depi.Models\\Depi.Models.csproj": {
+              "projectPath": "C:\\Users\\Royal\\source\\repos\\DEPI_backend\\Depi.Models\\Depi.Models.csproj"
             },
-            "C:\\Users\\Royal\\Source\\Repos\\DEPI_backend\\Depi.Utility\\Depi.Utility.csproj": {
-              "projectPath": "C:\\Users\\Royal\\Source\\Repos\\DEPI_backend\\Depi.Utility\\Depi.Utility.csproj"
+            "C:\\Users\\Royal\\source\\repos\\DEPI_backend\\Depi.Utility\\Depi.Utility.csproj": {
+              "projectPath": "C:\\Users\\Royal\\source\\repos\\DEPI_backend\\Depi.Utility\\Depi.Utility.csproj"
             }
           }
         }

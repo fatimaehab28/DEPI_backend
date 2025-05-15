@@ -3,28 +3,52 @@
   "WorkspaceRootPath": "C:\\Users\\Royal\\source\\repos\\DEPI_backend\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{1E2D8E5D-D520-4D85-BE21-C9AF0647F407}|depiBackend\\depiBackend.csproj|c:\\users\\royal\\source\\repos\\depi_backend\\depibackend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1E2D8E5D-D520-4D85-BE21-C9AF0647F407}|depiBackend\\depiBackend.csproj|solutionrelative:depibackend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1E2D8E5D-D520-4D85-BE21-C9AF0647F407}|depiBackend\\depiBackend.csproj|c:\\users\\royal\\source\\repos\\depi_backend\\depibackend\\controllers\\ordercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1E2D8E5D-D520-4D85-BE21-C9AF0647F407}|depiBackend\\depiBackend.csproj|solutionrelative:depibackend\\controllers\\ordercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1E2D8E5D-D520-4D85-BE21-C9AF0647F407}|depiBackend\\depiBackend.csproj|c:\\users\\royal\\source\\repos\\depi_backend\\depibackend\\services\\cartservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1E2D8E5D-D520-4D85-BE21-C9AF0647F407}|depiBackend\\depiBackend.csproj|solutionrelative:depibackend\\services\\cartservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1E2D8E5D-D520-4D85-BE21-C9AF0647F407}|depiBackend\\depiBackend.csproj|c:\\users\\royal\\source\\repos\\depi_backend\\depibackend\\models\\ordercartitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1E2D8E5D-D520-4D85-BE21-C9AF0647F407}|depiBackend\\depiBackend.csproj|solutionrelative:depibackend\\models\\ordercartitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1E2D8E5D-D520-4D85-BE21-C9AF0647F407}|depiBackend\\depiBackend.csproj|c:\\users\\royal\\source\\repos\\depi_backend\\depibackend\\migrations\\20250515170540_addcartandcartitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1E2D8E5D-D520-4D85-BE21-C9AF0647F407}|depiBackend\\depiBackend.csproj|solutionrelative:depibackend\\migrations\\20250515170540_addcartandcartitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{90C4F23C-F118-4F01-9245-8276076F8C58}|Depi.Models\\Depi.Models.csproj|c:\\users\\royal\\source\\repos\\depi_backend\\depi.models\\cartitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{90C4F23C-F118-4F01-9245-8276076F8C58}|Depi.Models\\Depi.Models.csproj|solutionrelative:depi.models\\cartitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1E2D8E5D-D520-4D85-BE21-C9AF0647F407}|depiBackend\\depiBackend.csproj|c:\\users\\royal\\source\\repos\\depi_backend\\depibackend\\services\\cartservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1E2D8E5D-D520-4D85-BE21-C9AF0647F407}|depiBackend\\depiBackend.csproj|solutionrelative:depibackend\\services\\cartservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F3D46B67-F1E1-4211-A4C6-7B94B7C24EF5}|Depi.DataAccess\\Depi.DataAccess.csproj|c:\\users\\royal\\source\\repos\\depi_backend\\depi.dataaccess\\irepository\\iorderrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F3D46B67-F1E1-4211-A4C6-7B94B7C24EF5}|Depi.DataAccess\\Depi.DataAccess.csproj|solutionrelative:depi.dataaccess\\irepository\\iorderrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F3D46B67-F1E1-4211-A4C6-7B94B7C24EF5}|Depi.DataAccess\\Depi.DataAccess.csproj|c:\\users\\royal\\source\\repos\\depi_backend\\depi.dataaccess\\orderrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F3D46B67-F1E1-4211-A4C6-7B94B7C24EF5}|Depi.DataAccess\\Depi.DataAccess.csproj|solutionrelative:depi.dataaccess\\orderrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1E2D8E5D-D520-4D85-BE21-C9AF0647F407}|depiBackend\\depiBackend.csproj|c:\\users\\royal\\source\\repos\\depi_backend\\depibackend\\migrations\\20250515170540_addcartandcartitem.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1E2D8E5D-D520-4D85-BE21-C9AF0647F407}|depiBackend\\depiBackend.csproj|solutionrelative:depibackend\\migrations\\20250515170540_addcartandcartitem.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{1E2D8E5D-D520-4D85-BE21-C9AF0647F407}|depiBackend\\depiBackend.csproj|c:\\users\\royal\\source\\repos\\depi_backend\\depibackend\\services\\icartservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1E2D8E5D-D520-4D85-BE21-C9AF0647F407}|depiBackend\\depiBackend.csproj|solutionrelative:depibackend\\services\\icartservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1E2D8E5D-D520-4D85-BE21-C9AF0647F407}|depiBackend\\depiBackend.csproj|c:\\users\\royal\\source\\repos\\depi_backend\\depibackend\\models\\cartitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1E2D8E5D-D520-4D85-BE21-C9AF0647F407}|depiBackend\\depiBackend.csproj|solutionrelative:depibackend\\models\\cartitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{1E2D8E5D-D520-4D85-BE21-C9AF0647F407}|depiBackend\\depiBackend.csproj|c:\\users\\royal\\source\\repos\\depi_backend\\depibackend\\depibackend.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
       "RelativeMoniker": "D:0:0:{1E2D8E5D-D520-4D85-BE21-C9AF0647F407}|depiBackend\\depiBackend.csproj|solutionrelative:depibackend\\depibackend.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F3D46B67-F1E1-4211-A4C6-7B94B7C24EF5}|Depi.DataAccess\\Depi.DataAccess.csproj|c:\\users\\royal\\source\\repos\\depi_backend\\depi.dataaccess\\depi.dataaccess.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{F3D46B67-F1E1-4211-A4C6-7B94B7C24EF5}|Depi.DataAccess\\Depi.DataAccess.csproj|solutionrelative:depi.dataaccess\\depi.dataaccess.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F3D46B67-F1E1-4211-A4C6-7B94B7C24EF5}|Depi.DataAccess\\Depi.DataAccess.csproj|c:\\users\\royal\\source\\repos\\depi_backend\\depi.dataaccess\\datacontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F3D46B67-F1E1-4211-A4C6-7B94B7C24EF5}|Depi.DataAccess\\Depi.DataAccess.csproj|solutionrelative:depi.dataaccess\\datacontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,20 +58,45 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 9,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\Royal\\source\\repos\\DEPI_backend\\depiBackend\\Program.cs",
-              "RelativeDocumentMoniker": "depiBackend\\Program.cs",
-              "ToolTip": "C:\\Users\\Royal\\source\\repos\\DEPI_backend\\depiBackend\\Program.cs",
-              "RelativeToolTip": "depiBackend\\Program.cs",
-              "ViewState": "AgIAAHUAAAAAAAAAAAAewH4AAAAAAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "20250515170540_AddCartAndCartItem.cs",
+              "DocumentMoniker": "C:\\Users\\Royal\\source\\repos\\DEPI_backend\\depiBackend\\Migrations\\20250515170540_AddCartAndCartItem.cs",
+              "RelativeDocumentMoniker": "depiBackend\\Migrations\\20250515170540_AddCartAndCartItem.cs",
+              "ToolTip": "C:\\Users\\Royal\\source\\repos\\DEPI_backend\\depiBackend\\Migrations\\20250515170540_AddCartAndCartItem.cs",
+              "RelativeToolTip": "depiBackend\\Migrations\\20250515170540_AddCartAndCartItem.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAwAAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-08T12:15:57.678Z",
-              "IsPinned": true,
+              "WhenOpened": "2025-05-15T20:15:22.106Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "OrderRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Royal\\source\\repos\\DEPI_backend\\Depi.DataAccess\\OrderRepository.cs",
+              "RelativeDocumentMoniker": "Depi.DataAccess\\OrderRepository.cs",
+              "ToolTip": "C:\\Users\\Royal\\source\\repos\\DEPI_backend\\Depi.DataAccess\\OrderRepository.cs",
+              "RelativeToolTip": "Depi.DataAccess\\OrderRepository.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAA3wBMAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-15T20:07:58.704Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "20250515170540_AddCartAndCartItem.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\Royal\\source\\repos\\DEPI_backend\\depiBackend\\Migrations\\20250515170540_AddCartAndCartItem.Designer.cs",
+              "RelativeDocumentMoniker": "depiBackend\\Migrations\\20250515170540_AddCartAndCartItem.Designer.cs",
+              "ToolTip": "C:\\Users\\Royal\\source\\repos\\DEPI_backend\\depiBackend\\Migrations\\20250515170540_AddCartAndCartItem.Designer.cs",
+              "RelativeToolTip": "depiBackend\\Migrations\\20250515170540_AddCartAndCartItem.Designer.cs",
+              "ViewState": "AgIAAJcAAAAAAAAAAAAMwKMAAAA8AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-15T20:07:55.406Z",
               "EditorCaption": ""
             },
             {
@@ -67,68 +116,124 @@
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             },
             {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "CartService.cs",
-              "DocumentMoniker": "C:\\Users\\Royal\\source\\repos\\DEPI_backend\\depiBackend\\Services\\CartService.cs",
-              "RelativeDocumentMoniker": "depiBackend\\Services\\CartService.cs",
-              "ToolTip": "C:\\Users\\Royal\\source\\repos\\DEPI_backend\\depiBackend\\Services\\CartService.cs",
-              "RelativeToolTip": "depiBackend\\Services\\CartService.cs",
-              "ViewState": "AgIAAB4AAAAAAAAAAAAYwA0AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-15T17:28:14.39Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ICartService.cs",
-              "DocumentMoniker": "C:\\Users\\Royal\\source\\repos\\DEPI_backend\\depiBackend\\Services\\ICartService.cs",
-              "RelativeDocumentMoniker": "depiBackend\\Services\\ICartService.cs",
-              "ToolTip": "C:\\Users\\Royal\\source\\repos\\DEPI_backend\\depiBackend\\Services\\ICartService.cs",
-              "RelativeToolTip": "depiBackend\\Services\\ICartService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAACAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-15T17:15:47.145Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "20250515170540_AddCartAndCartItem.cs",
-              "DocumentMoniker": "C:\\Users\\Royal\\source\\repos\\DEPI_backend\\depiBackend\\Migrations\\20250515170540_AddCartAndCartItem.cs",
-              "RelativeDocumentMoniker": "depiBackend\\Migrations\\20250515170540_AddCartAndCartItem.cs",
-              "ToolTip": "C:\\Users\\Royal\\source\\repos\\DEPI_backend\\depiBackend\\Migrations\\20250515170540_AddCartAndCartItem.cs",
-              "RelativeToolTip": "depiBackend\\Migrations\\20250515170540_AddCartAndCartItem.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAABFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-15T17:05:41.238Z",
-              "EditorCaption": ""
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "depiBackend.csproj",
-              "DocumentMoniker": "C:\\Users\\Royal\\Source\\Repos\\DEPI_backend\\depiBackend\\depiBackend.csproj",
-              "RelativeDocumentMoniker": "depiBackend\\depiBackend.csproj",
-              "ToolTip": "C:\\Users\\Royal\\Source\\Repos\\DEPI_backend\\depiBackend\\depiBackend.csproj",
-              "RelativeToolTip": "depiBackend\\depiBackend.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-05-15T16:56:45.998Z",
+              "Title": "IOrderRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Royal\\source\\repos\\DEPI_backend\\Depi.DataAccess\\IRepository\\IOrderRepository.cs",
+              "RelativeDocumentMoniker": "Depi.DataAccess\\IRepository\\IOrderRepository.cs",
+              "ToolTip": "C:\\Users\\Royal\\source\\repos\\DEPI_backend\\Depi.DataAccess\\IRepository\\IOrderRepository.cs",
+              "RelativeToolTip": "Depi.DataAccess\\IRepository\\IOrderRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-15T19:38:22.066Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "OrderController.cs",
+              "DocumentMoniker": "C:\\Users\\Royal\\source\\repos\\DEPI_backend\\depiBackend\\Controllers\\OrderController.cs",
+              "RelativeDocumentMoniker": "depiBackend\\Controllers\\OrderController.cs",
+              "ToolTip": "C:\\Users\\Royal\\source\\repos\\DEPI_backend\\depiBackend\\Controllers\\OrderController.cs",
+              "RelativeToolTip": "depiBackend\\Controllers\\OrderController.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAkwBgAAABDAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-15T19:28:17.966Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "OrderCartItem.cs",
+              "DocumentMoniker": "C:\\Users\\Royal\\source\\repos\\DEPI_backend\\depiBackend\\Models\\OrderCartItem.cs",
+              "RelativeDocumentMoniker": "depiBackend\\Models\\OrderCartItem.cs",
+              "ToolTip": "C:\\Users\\Royal\\source\\repos\\DEPI_backend\\depiBackend\\Models\\OrderCartItem.cs",
+              "RelativeToolTip": "depiBackend\\Models\\OrderCartItem.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-15T19:33:14.638Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "CartItem.cs",
-              "DocumentMoniker": "C:\\Users\\Royal\\source\\repos\\DEPI_backend\\depiBackend\\Models\\CartItem.cs",
-              "RelativeDocumentMoniker": "depiBackend\\Models\\CartItem.cs",
-              "ToolTip": "C:\\Users\\Royal\\source\\repos\\DEPI_backend\\depiBackend\\Models\\CartItem.cs",
-              "RelativeToolTip": "depiBackend\\Models\\CartItem.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAABTAAAAAAAAAA==",
+              "Title": "CartService.cs",
+              "DocumentMoniker": "C:\\Users\\Royal\\source\\repos\\DEPI_backend\\depiBackend\\Services\\CartService.cs",
+              "RelativeDocumentMoniker": "depiBackend\\Services\\CartService.cs",
+              "ToolTip": "C:\\Users\\Royal\\source\\repos\\DEPI_backend\\depiBackend\\Services\\CartService.cs",
+              "RelativeToolTip": "depiBackend\\Services\\CartService.cs",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAmwCMAAAA1AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-15T16:42:13.817Z",
+              "WhenOpened": "2025-05-15T19:28:20.961Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "CartItem.cs",
+              "DocumentMoniker": "C:\\Users\\Royal\\source\\repos\\DEPI_backend\\Depi.Models\\CartItem.cs",
+              "RelativeDocumentMoniker": "Depi.Models\\CartItem.cs",
+              "ToolTip": "C:\\Users\\Royal\\source\\repos\\DEPI_backend\\Depi.Models\\CartItem.cs",
+              "RelativeToolTip": "Depi.Models\\CartItem.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-15T19:41:07.07Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ICartService.cs",
+              "DocumentMoniker": "C:\\Users\\Royal\\source\\repos\\DEPI_backend\\depiBackend\\Services\\ICartService.cs",
+              "RelativeDocumentMoniker": "depiBackend\\Services\\ICartService.cs",
+              "ToolTip": "C:\\Users\\Royal\\source\\repos\\DEPI_backend\\depiBackend\\Services\\ICartService.cs",
+              "RelativeToolTip": "depiBackend\\Services\\ICartService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-15T19:32:45.584Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "depiBackend",
+              "DocumentMoniker": "C:\\Users\\Royal\\source\\repos\\DEPI_backend\\depiBackend\\depiBackend.csproj",
+              "RelativeDocumentMoniker": "depiBackend\\depiBackend.csproj",
+              "ToolTip": "C:\\Users\\Royal\\source\\repos\\DEPI_backend\\depiBackend\\depiBackend.csproj",
+              "RelativeToolTip": "depiBackend\\depiBackend.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAABgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-05-15T19:48:58.104Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Depi.DataAccess",
+              "DocumentMoniker": "C:\\Users\\Royal\\source\\repos\\DEPI_backend\\Depi.DataAccess\\Depi.DataAccess.csproj",
+              "RelativeDocumentMoniker": "Depi.DataAccess\\Depi.DataAccess.csproj",
+              "ToolTip": "C:\\Users\\Royal\\source\\repos\\DEPI_backend\\Depi.DataAccess\\Depi.DataAccess.csproj",
+              "RelativeToolTip": "Depi.DataAccess\\Depi.DataAccess.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-05-15T19:48:50.745Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "DataContext.cs",
+              "DocumentMoniker": "C:\\Users\\Royal\\source\\repos\\DEPI_backend\\Depi.DataAccess\\DataContext.cs",
+              "RelativeDocumentMoniker": "Depi.DataAccess\\DataContext.cs",
+              "ToolTip": "C:\\Users\\Royal\\source\\repos\\DEPI_backend\\Depi.DataAccess\\DataContext.cs",
+              "RelativeToolTip": "Depi.DataAccess\\DataContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-15T19:34:13.872Z",
               "EditorCaption": ""
             }
           ]

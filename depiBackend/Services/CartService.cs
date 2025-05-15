@@ -14,17 +14,23 @@ namespace depiBackend.Services
 
         public Cart GetCart(string userName)
         {
-            var cart = _context.Carts
+            var cart = _context.Carts as DbSet<Cart>;
+            if (cart == null)
+            {
+                throw new InvalidOperationException("Carts is not properly configured as a DbSet<Cart>.");
+            }
+
+            var userCart = cart
                 .Include(c => c.Items)
                 .FirstOrDefault(c => c.UserName == userName);
 
-            if (cart == null)
+            if (userCart == null)
             {
-                cart = new Cart { UserName = userName };
-                _context.Carts.Add(cart);
+                userCart = new Cart { UserName = userName };
+                cart.Add(userCart);
                 _context.SaveChanges();
             }
-            return cart;
+            return userCart;
         }
 
         public void AddItem(string userName, CartItem item)
