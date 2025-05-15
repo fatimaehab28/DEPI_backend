@@ -29,7 +29,7 @@ builder.Services.AddCors(options =>
     options.AddPolicy("MyPolicy",
         policy =>
         {
-            policy.WithOrigins("http://localhost:5173") // Allow this origin
+            policy.WithOrigins("http://localhost:3000") // Allow this origin
                   .AllowAnyMethod() // Allow any HTTP method
                   .AllowAnyHeader(); // Allow any headers
         });
@@ -49,6 +49,15 @@ builder.Services.AddScoped<IDataRepository<Product>, ProductRepository>();
 
 builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
 builder.Services.AddScoped<IDataRepository<Category>, CategoryRepository>();
+
+
+builder.Services.AddScoped<IOrderRepository, OrderRepository>();
+//builder.Services.AddScoped<IDataRepository<Order>, OrderRepository>();
+
+builder.Services.AddScoped<IDataRepository<Order>, DataRepository<Order>>();
+
+
+
 
 
 

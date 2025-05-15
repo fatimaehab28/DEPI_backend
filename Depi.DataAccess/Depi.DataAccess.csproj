@@ -1,12 +1,13 @@
-﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
-    <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Depi.Models\Depi.Models.csproj" />
     <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="8.0.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.0">
@@ -20,16 +21,6 @@
     </PackageReference>
     <PackageReference Include="Stripe.net" Version="48.0.2" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Resources\products\" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\Depi.DataAccess\Depi.DataAccess.csproj" />
-    <ProjectReference Include="..\Depi.Models\Depi.Models.csproj" />
-    <ProjectReference Include="..\Depi.Utility\Depi.Utility.csproj" />
   </ItemGroup>
 
 </Project>
