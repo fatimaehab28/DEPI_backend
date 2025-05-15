@@ -23,7 +23,11 @@ builder.Services.AddDbContext<DataContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("defaultDbContext"));
 });
 
- 
+
+//AddingNewEventArgs chasing 
+builder.Services.AddMemoryCache();
+
+
 
 builder.Services.AddControllers();
 

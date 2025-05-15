@@ -2,8 +2,9 @@
 using depiBackend.Data.IRepository;
 using depiBackend.Models;
 using depiBackend.Dtos;
- using depiBackend.Helpers;
+using depiBackend.Helpers;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.Extensions.Caching.Memory;
 
 namespace depiBackend.Controllers
 {
@@ -12,12 +13,13 @@ namespace depiBackend.Controllers
     public class ProductsController : ControllerBase
     {
         private readonly IDataRepository<Product> _repo;
+        private readonly IMemoryCache _cache;
 
-        public ProductsController(IDataRepository<Product> repo)
+        public ProductsController(IDataRepository<Product> repo, IMemoryCache cache)
         {
             _repo = repo;
+            _cache = cache;
         }
-
 
         [HttpPost("create")]
         public async Task<IActionResult> Create([FromForm] ProductDto dto)
@@ -40,34 +42,31 @@ namespace depiBackend.Controllers
 
             await _repo.AddAsync(product);
             await _repo.Save();
+            _cache.Remove("all_products"); // Clear cache after create
 
             return Ok(new { message = "Product created." });
         }
 
-         
         [HttpGet]
         public async Task<IActionResult> GetAll()
         {
             var baseUrl = "https://localhost:7130/";
-            var products = await _repo.GetAllAsyncInclude(p => true, p => p.Category);
-
-            foreach (var product in products)
+            const string cacheKey = "all_products";
+            if (!_cache.TryGetValue(cacheKey, out List<Product> products))
             {
-                product.ImageUrl = baseUrl + product.ImageUrl;
+                var productsFromDb = await _repo.GetAllAsyncInclude(p => true, p => p.Category);
+                products = productsFromDb.ToList();
+
+                foreach (var product in products)
+                {
+                    product.ImageUrl = baseUrl + product.ImageUrl;
+                }
+
+                _cache.Set(cacheKey, products, TimeSpan.FromMinutes(10));
             }
 
             return Ok(products);
         }
-
-
-        //[HttpGet("{id}")]
-        //public async Task<IActionResult> GetById(int id)
-        //{
-        //    var product = await _repo.GetByIdAsyncInclude(p => p.Id == id, p => p.Category);
-        //    return product == null ? NotFound() : Ok(product);
-        //}
-
-
 
         [HttpGet("{id}")]
         public async Task<IActionResult> GetById(int id)
@@ -86,7 +85,6 @@ namespace depiBackend.Controllers
 
             return Ok(product);
         }
-
 
         [HttpPut("{id}")]
         public async Task<IActionResult> Update(int id, [FromForm] ProductDto dto)
@@ -107,6 +105,7 @@ namespace depiBackend.Controllers
 
             await _repo.UpdateAsync(product);
             await _repo.Save();
+            _cache.Remove("all_products"); // Clear cache after update
 
             return Ok(product);
         }
@@ -119,11 +118,9 @@ namespace depiBackend.Controllers
 
             await _repo.DeleteAsync(product);
             await _repo.Save();
+            _cache.Remove("all_products"); // Clear cache after delete
 
             return Ok();
         }
     }
-
-
-
 }
