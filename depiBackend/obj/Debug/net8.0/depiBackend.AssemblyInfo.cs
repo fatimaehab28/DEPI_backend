@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("depiBackend")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3281ac34373b856ab418845c5f7acb7ed12c3390")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+48fa6b8566be15198c24746976f118d24d29b295")]
 [assembly: System.Reflection.AssemblyProductAttribute("depiBackend")]
 [assembly: System.Reflection.AssemblyTitleAttribute("depiBackend")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

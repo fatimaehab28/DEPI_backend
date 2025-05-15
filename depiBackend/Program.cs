@@ -12,6 +12,7 @@ using depiBackend.Data;
 using depiBackend.Data.IRepository;
 using depiBackend.Models;
 using depiBackend.Extensions;
+using depiBackend.Services;
 
 
 var builder = WebApplication.CreateBuilder(args);
@@ -65,6 +66,7 @@ builder.Services.AddScoped<IDataRepository<Order>, DataRepository<Order>>();
 
 builder.Services.AddControllersWithViews().AddJsonOptions(options =>
     options.JsonSerializerOptions.ReferenceHandler = System.Text.Json.Serialization.ReferenceHandler.IgnoreCycles);
+builder.Services.AddScoped<ICartService, CartService>();
 
 // Configure JWT Authentication
 builder.Services.AddAuthentication(opt =>

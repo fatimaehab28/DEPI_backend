@@ -28,7 +28,7 @@ namespace depiBackend.Controllers
             try
             {
 
-                await _orderRepository.PlaceOrderAsync(cartItems);
+                //await _orderRepository.PlaceOrderAsync(cartItems);
 
                 return Ok(new { Message = "Order placed successfully." });
             }
