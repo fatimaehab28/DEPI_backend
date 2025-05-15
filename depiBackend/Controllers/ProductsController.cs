@@ -3,6 +3,7 @@ using depiBackend.Data.IRepository;
 using depiBackend.Models;
 using depiBackend.Dtos;
  using depiBackend.Helpers;
+using Microsoft.AspNetCore.Authorization;
 
 namespace depiBackend.Controllers
 {
@@ -43,7 +44,7 @@ namespace depiBackend.Controllers
             return Ok(new { message = "Product created." });
         }
 
-
+         
         [HttpGet]
         public async Task<IActionResult> GetAll()
         {
