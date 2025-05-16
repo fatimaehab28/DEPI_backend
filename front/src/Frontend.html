@@ -1,0 +1,924 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>ECommerce - Inspired by Jumia</title>
+<style>
+  /* Reset and base */
+  * {
+    box-sizing: border-box;
+  }
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f5faff;
+    margin: 0;
+    color: #2c3e50;
+  }
+  a {
+    text-decoration: none;
+    color: #0a74da;
+  }
+  a:hover {
+    color: #064a87;
+  }
+  h2, h3, h4 {
+    margin: 0 0 12px 0;
+    font-weight: 600;
+  }
+  /* Navbar */
+  nav {
+    background-color: #0a74da; /* sky blue */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 24px;
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  nav .logo {
+    font-size: 1.8rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    cursor: pointer;
+    user-select: none;
+  }
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 24px;
+    margin: 0;
+    padding: 0;
+  }
+  nav ul li {
+    cursor: pointer;
+    font-weight: 600;
+  }
+  nav ul li:hover {
+    color: #dbe9ff;
+  }
+  nav .cart-icon {
+    position: relative;
+    cursor: pointer;
+  }
+  nav .cart-icon svg {
+    width: 26px;
+    height: 26px;
+    fill: white;
+  }
+  nav .cart-count {
+    position: absolute;
+    top: -6px;
+    right: -10px;
+    background: #ff5252;
+    color: white;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 2px 6px;
+    border-radius: 50%;
+    min-width: 20px;
+    text-align: center;
+    user-select: none;
+  }
+
+  /* Main container */
+  main {
+    max-width: 1200px;
+    margin: 24px auto;
+    padding: 0 16px;
+  }
+
+  /* Home page */
+  #home {
+    text-align: center;
+    margin-top: 48px;
+  }
+  #home h2 {
+    font-size: 2.8rem;
+    color: #0a74da;
+  }
+  #home p {
+    font-size: 1.2rem;
+    margin: 16px 0 32px;
+    color: #555;
+  }
+  #btn-explore {
+    background-color: #0a74da;
+    color: white;
+    border: none;
+    padding: 14px 36px;
+    font-size: 1.1rem;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-weight: 600;
+  }
+  #btn-explore:hover {
+    background-color: #064a87;
+  }
+
+  /* Products Section */
+  section h2.category-title {
+    margin-top: 48px;
+    color: #0a74da;
+    border-bottom: 3px solid #0a74da;
+    padding-bottom: 6px;
+    font-size: 1.8rem;
+  }
+  .products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(220px,1fr));
+    gap: 24px;
+    margin-top: 20px;
+  }
+  .product {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 3px 8px rgb(10 116 218 / 0.1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .product:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgb(10 116 218 / 0.15);
+  }
+  .product img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+  }
+  .product h4 {
+    font-size: 1.1rem;
+    margin: 12px 16px 4px 16px;
+    color: #2c3e50;
+    flex-grow: 1;
+  }
+  .product p {
+    font-size: 1rem;
+    font-weight: 700;
+    margin: 0 16px 12px 16px;
+    color: #0a74da;
+  }
+  .btn-add-cart {
+    background-color: #0a74da;
+    color: white;
+    border: none;
+    padding: 12px;
+    font-weight: 600;
+    font-size: 1rem;
+    border-radius: 0 0 10px 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  .btn-add-cart:hover {
+    background-color: #064a87;
+  }
+
+  /* Cart Section */
+  #cart table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 24px;
+  }
+  #cart table thead th {
+    border-bottom: 2px solid #0a74da;
+    padding: 12px 8px;
+    color: #0a74da;
+    font-weight: 700;
+  }
+  #cart table tbody td {
+    padding: 12px 8px;
+    border-bottom: 1px solid #ddd;
+    vertical-align: middle;
+  }
+  #cart img {
+    width: 50px;
+    border-radius: 6px;
+  }
+  #cart .qty-input {
+    width: 56px;
+    padding: 6px;
+    font-size: 1rem;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    text-align: center;
+  }
+  #cart .btn-remove-cart {
+    background-color: #ff4d4d;
+    border: none;
+    color: white;
+    padding: 6px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.25s ease;
+  }
+  #cart .btn-remove-cart:hover {
+    background-color: #d73838;
+  }
+  #cart-total {
+    font-size: 1.3rem;
+    font-weight: 700;
+    text-align: right;
+    color: #0a74da;
+    margin-bottom: 24px;
+  }
+  #checkout-btn {
+    background-color: #0a74da;
+    color: white;
+    border: none;
+    padding: 14px 36px;
+    font-size: 1.1rem;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: 600;
+  }
+  #checkout-btn:hover {
+    background-color: #064a87;
+  }
+
+  /* Checkout Section */
+  #checkout form {
+    max-width: 480px;
+    margin: 0 auto 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+  }
+  #checkout label {
+    font-weight: 600;
+    color: #2c3e50;
+  }
+  #checkout input {
+    padding: 10px 14px;
+    font-size: 1rem;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    outline-offset: 2px;
+  }
+  #checkout input:focus {
+    border-color: #0a74da;
+    outline: 2px solid #a9c9ff;
+  }
+  #checkout .form-btn {
+    background-color: #0a74da;
+    color: white;
+    padding: 14px;
+    border: none;
+    font-weight: 700;
+    font-size: 1.1rem;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  #checkout .form-btn:hover {
+    background-color: #064a87;
+  }
+
+  /* Confirmation */
+  #confirmation {
+    text-align: center;
+    margin-top: 60px;
+  }
+  #confirmation h2 {
+    color: #0a74da;
+    font-size: 2.4rem;
+  }
+  #confirmation p {
+    font-size: 1.2rem;
+    margin: 16px 0 36px;
+    color: #555;
+  }
+  #btn-back-home {
+    background-color: #0a74da;
+    color: white;
+    border: none;
+    padding: 14px 36px;
+    font-size: 1.1rem;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: 600;
+  }
+  #btn-back-home:hover {
+    background-color: #064a87;
+  }
+
+  /* Forms (login, register) */
+  form {
+    max-width: 400px;
+    margin: 40px auto;
+    background: white;
+    padding: 28px 24px;
+    border-radius: 14px;
+    box-shadow: 0 5px 15px rgb(10 116 218 / 0.15);
+  }
+  form h3 {
+    margin-bottom: 20px;
+    color: #0a74da;
+  }
+  form label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 600;
+  }
+  form input {
+    width: 100%;
+    padding: 10px 14px;
+    margin-bottom: 16px;
+    font-size: 1rem;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    outline-offset: 2px;
+  }
+  form input:focus {
+    border-color: #0a74da;
+    outline: 2px solid #a9c9ff;
+  }
+  .form-btn {
+    width: 100%;
+    background-color: #0a74da;
+    border: none;
+    color: white;
+    padding: 14px;
+    font-weight: 700;
+    font-size: 1.1rem;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  .form-btn:hover {
+    background-color: #064a87;
+  }
+  .error-msg {
+    color: #d73838;
+    margin-bottom: 14px;
+    font-weight: 600;
+    font-size: 0.9rem;
+  }
+  .toggle-link {
+    margin-top: 12px;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #0a74da;
+    cursor: pointer;
+    user-select: none;
+  }
+  .toggle-link span:hover {
+    text-decoration: underline;
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    nav ul {
+      gap: 16px;
+    }
+    main {
+      margin: 12px auto;
+      padding: 0 12px;
+    }
+    .products-grid {
+      grid-template-columns: repeat(auto-fill,minmax(180px,1fr));
+      gap: 18px;
+    }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="logo" id="nav-home">ECommerce</div>
+  <ul>
+    <li id="nav-products">Products</li>
+    <li id="nav-login">Login</li>
+    <li id="nav-register">Register</li>
+    <li id="nav-cart" class="cart-icon" aria-label="Shopping cart">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7 18c-1.1046 0-2 .8954-2 2s.8954 2 2 2 2-.8954 2-2-.8954-2-2-2zm10 0c-1.1046 0-2 .8954-2 2s.8954 2 2 2 2-.8954 2-2-.8954-2-2-2zM7.061 14h9.879l2.268-7H6.174l.887 7zm12.46-9H5.33l-.53-2H1v2h2.11l3.593 12.434A1 1 0 007.624 18H19v-2H8.812l-.457-3h9.165a.997.997 0 00.959-.715L19.52 5z"/></svg>
+      <div class="cart-count" id="cart-count">0</div>
+    </li>
+  </ul>
+</nav>
+
+<main>
+  <!-- Home Page -->
+  <section id="home">
+    <h2>Welcome to ECommerce</h2>
+    <p>Your favorite online store for Makeup & Fashion</p>
+    <button id="btn-explore">Explore Products</button>
+  </section>
+
+  <!-- Products Page -->
+  <section id="products" style="display:none;">
+    <h2 class="category-title">Makeup</h2>
+    <div id="makeup-products" class="products-grid"></div>
+    <h2 class="category-title">Fashion</h2>
+    <div id="fashion-products" class="products-grid"></div>
+  </section>
+
+  <!-- Cart Page -->
+  <section id="cart" style="display:none;">
+    <h2>Your Cart</h2>
+    <table aria-label="Shopping cart items">
+      <thead>
+        <tr>
+          <th>Image</th>
+          <th>Name</th>
+          <th>Price</th>
+          <th>Quantity</th>
+          <th>Total</th>
+          <th>Remove</th>
+        </tr>
+      </thead>
+      <tbody id="cart-table-body"></tbody>
+    </table>
+    <div id="cart-total">Total: $0.00</div>
+    <button id="checkout-btn">Proceed to Checkout</button>
+  </section>
+
+  <!-- Checkout Page -->
+  <section id="checkout" style="display:none;">
+    <h2>Checkout</h2>
+    <form id="checkout-form">
+      <label for="fullname">Full Name</label>
+      <input id="fullname" name="fullname" required />
+      <label for="address">Address</label>
+      <input id="address" name="address" required />
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required />
+      <button type="submit" class="form-btn">Confirm Order</button>
+    </form>
+  </section>
+
+  <!-- Confirmation Page -->
+  <section id="confirmation" style="display:none;">
+    <h2>Thank You!</h2>
+    <p>Your order has been placed successfully.</p>
+    <button id="btn-back-home">Back to Home</button>
+  </section>
+
+  <!-- Login Page -->
+  <section id="login" style="display:none;">
+    <form id="login-form" novalidate>
+      <h3>Login</h3>
+      <div class="error-msg" id="login-error" style="display:none;"></div>
+      <label for="login-email">Email</label>
+      <input type="email" id="login-email" name="login-email" required />
+      <label for="login-password">Password</label>
+      <input type="password" id="login-password" name="login-password" required />
+      <button type="submit" class="form-btn">Login</button>
+      <div class="toggle-link">Don't have an account? <span id="link-to-register">Register here</span></div>
+    </form>
+  </section>
+
+  <!-- Register Page -->
+  <section id="register" style="display:none;">
+    <form id="register-form" novalidate>
+      <h3>Register</h3>
+      <div class="error-msg" id="register-error" style="display:none;"></div>
+      <label for="register-name">Name</label>
+      <input type="text" id="register-name" name="register-name" required />
+      <label for="register-email">Email</label>
+      <input type="email" id="register-email" name="register-email" required />
+      <label for="register-password">Password</label>
+      <input type="password" id="register-password" name="register-password" required />
+      <button type="submit" class="form-btn">Register</button>
+      <div class="toggle-link">Already have an account? <span id="link-to-login">Login here</span></div>
+    </form>
+  </section>
+</main>
+
+<script>
+  // Products Data
+  const productsData = [
+    // Makeup
+    { id: 1, name: 'Lipstick Matte', price: 15.99, category: 'makeup', image: 'https://images.unsplash.com/photo-1542838687-7e84d0931b0f?auto=format&fit=crop&w=400&q=80' },
+    { id: 2, name: 'Liquid Foundation', price: 22.50, category: 'makeup', image: 'https://images.unsplash.com/photo-1536238130430-47c1a34c6eb7?auto=format&fit=crop&w=400&q=80' },
+    { id: 3, name: 'Eyeshadow Palette', price: 29.99, category: 'makeup', image: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80' },
+    { id: 4, name: 'Blush Powder', price: 18.00, category: 'makeup', image: 'https://images.unsplash.com/photo-1542838689-420b0f3443c8?auto=format&fit=crop&w=400&q=80' },
+    { id: 5, name: 'Mascara Black', price: 19.99, category: 'makeup', image: 'https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=400&q=80' },
+
+    // Fashion
+    { id: 6, name: 'Casual T-shirt', price: 20.99, category: 'fashion', image: 'https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&w=400&q=80' },
+    { id: 7, name: 'Denim Jeans', price: 35.00, category: 'fashion', image: 'https://images.unsplash.com/photo-1541099649105-f69ad21f3246?auto=format&fit=crop&w=400&q=80' },
+    { id: 8, name: 'Summer Dress', price: 40.00, category: 'fashion', image: 'https://images.unsplash.com/photo-1495121605193-b116b5b09b15?auto=format&fit=crop&w=400&q=80' },
+    { id: 9, name: 'Sneakers', price: 55.50, category: 'fashion', image: 'https://images.unsplash.com/photo-1519741494449-8920b5bb8d55?auto=format&fit=crop&w=400&q=80' },
+    { id: 10, name: 'Leather Jacket', price: 120.00, category: 'fashion', image: 'https://images.unsplash.com/photo-1520975691913-4b29bc7585a6?auto=format&fit=crop&w=400&q=80' },
+  ];
+
+  // Users (mock)
+  const users = [];
+
+  // Cart
+  let cart = [];
+
+  // Sections
+  const sections = ['home', 'products', 'cart', 'checkout', 'confirmation', 'login', 'register'];
+
+  // Elements
+  const makeupProductsDiv = document.getElementById('makeup-products');
+  const fashionProductsDiv = document.getElementById('fashion-products');
+  const cartCount = document.getElementById('cart-count');
+  const cartTableBody = document.getElementById('cart-table-body');
+  const cartTotal = document.getElementById('cart-total');
+  const btnCheckout = document.getElementById('checkout-btn');
+  const checkoutForm = document.getElementById('checkout-form');
+  const btnBackHome = document.getElementById('btn-back-home');
+
+  const navHomeTitle = document.getElementById('nav-home');
+  const navProducts = document.getElementById('nav-products');
+  const navCart = document.getElementById('nav-cart');
+  const navLogin = document.getElementById('nav-login');
+  const navRegister = document.getElementById('nav-register');
+
+  const loginForm = document.getElementById('login-form');
+  const registerForm = document.getElementById('register-form');
+
+  const loginError = document.getElementById('login-error');
+  const registerError = document.getElementById('register-error');
+
+  const linkToRegister = document.getElementById('link-to-register');
+  const linkToLogin = document.getElementById('link-to-login');
+
+  // Show section utility
+  function showSection(section) {
+    sections.forEach(s => {
+      document.getElementById(s).style.display = s === section ? 'block' : 'none';
+    });
+  }
+
+  // Render products by category
+  function renderProducts() {
+    makeupProductsDiv.innerHTML = '';
+    fashionProductsDiv.innerHTML = '';
+
+    productsData.forEach(product => {
+      const productDiv = document.createElement('div');
+      productDiv.className = 'product';
+
+      productDiv.innerHTML = `
+        <img src="${product.image}" alt="${product.name}" />
+        <h4>${product.name}</h4>
+        <p>$${product.price.toFixed(2)}</p>
+        <button data-id="${product.id}" class="btn-add-cart">Add to Cart</button>
+      `;
+
+      if (product.category === 'makeup') {
+        makeupProductsDiv.appendChild(productDiv);
+      } else if (product.category === 'fashion') {
+        fashionProductsDiv.appendChild(productDiv);
+      }
+    });
+  }
+
+  // Update cart count display
+  function updateCartCount() {
+    cartCount.textContent = cart.reduce((acc, item) => acc + item.quantity, 0);
+  }
+
+  // Add product to cart
+  function addToCart(productId) {
+    const product = productsData.find(p => p.id === productId);
+    if (!product) return;
+
+    const cartItem = cart.find(item => item.id === productId);
+    if (cartItem) {
+      cartItem.quantity++;
+    } else {
+      cart.push({ ...product, quantity: 1 });
+    }
+    updateCartCount();
+  }
+
+  // Render cart table
+  function renderCart() {
+    cartTableBody.innerHTML = '';
+    if (cart.length === 0) {
+      cartTableBody.innerHTML = '<tr><td colspan="6">Your cart is empty.</td></tr>';
+      cartTotal.textContent = 'Total: $0.00';
+      btnCheckout.disabled = true;
+      return;
+    }
+
+    btnCheckout.disabled = false;
+
+    cart.forEach(item => {
+      const totalPrice = (item.price * item.quantity).toFixed(2);
+      const row = document.createElement('tr');
+
+      row.innerHTML = `
+        <td><img src="${item.image}" alt="${item.name}" style="width:50px;"/></td>
+        <td>${item.name}</td>
+        <td>$${item.price.toFixed(2)}</td>
+        <td><input type="number" min="1" value="${item.quantity}" data-id="${item.id}" class="cart-quantity-input"/></td>
+        <td>$${totalPrice}</td>
+        <td><button data-id="${item.id}" class="btn-remove-cart">Remove</button></td>
+      `;
+
+      cartTableBody.appendChild(row);
+    });
+
+    const totalAmount = cart.reduce((acc, item) => acc + item.price * item.quantity, 0);
+    cartTotal.textContent = `Total: $${totalAmount.toFixed(2)}`;
+  }
+
+  // Remove item from cart
+  function removeFromCart(productId) {
+    cart = cart.filter(item => item.id !== productId);
+    updateCartCount();
+    renderCart();
+  }
+
+  // Update quantity in cart
+  function updateCartQuantity(productId, quantity) {
+    const item = cart.find(i => i.id === productId);
+    if (item && quantity > 0) {
+      item.quantity = quantity;
+    }
+    updateCartCount();
+    renderCart();
+  }
+
+  // Handle navigation clicks
+  navHomeTitle.addEventListener('click', () => {
+    showSection('home');
+  });
+  navProducts.addEventListener('click', () => {
+    renderProducts();
+    showSection('products');
+  });
+  navCart.addEventListener('click', () => {
+    renderCart();
+    showSection('cart');
+  });
+  navLogin.addEventListener('click', () => {
+    showSection('login');
+  });
+  navRegister.addEventListener('click', () => {
+    showSection('register');
+  });
+
+  // Explore button click
+  document.getElementById('btn-explore').addEventListener('click', () => {
+    renderProducts();
+    showSection('products');
+  });
+
+  // Cart table event delegation for quantity and remove
+  cartTableBody.addEventListener('input', e => {
+    if (e.target.classList.contains('cart-quantity-input')) {
+      const id = parseInt(e.target.getAttribute('data-id'));
+      const quantity = parseInt(e.target.value);
+      updateCartQuantity(id, quantity);
+    }
+  });
+  cartTableBody.addEventListener('click', e => {
+    if (e.target.classList.contains('btn-remove-cart')) {
+      const id = parseInt(e.target.getAttribute('data-id'));
+      removeFromCart(id);
+    }
+  });
+
+  // Add to cart buttons event delegation
+  document.body.addEventListener('click', e => {
+    if (e.target.classList.contains('btn-add-cart')) {
+      const id = parseInt(e.target.getAttribute('data-id'));
+      addToCart(id);
+    }
+  });
+
+  // Checkout button click
+  btnCheckout.addEventListener('click', () => {
+    showSection('checkout');
+  });
+
+  // Checkout form submission
+  checkoutForm.addEventListener('submit', e => {
+    e.preventDefault();
+    // For demo, just clear cart and show confirmation
+    cart = [];
+    updateCartCount();
+    showSection('confirmation');
+  });
+
+  // Back to home button
+  btnBackHome.addEventListener('click', () => {
+    showSection('home');
+  });
+
+  // Login form submission
+  loginForm.addEventListener('submit', e => {
+    e.preventDefault();
+    const email = loginForm['login-email'].value.trim();
+    const password = loginForm['login-password'].value.trim();
+
+    const user = users.find(u => u.email === email && u.password === password);
+    if (user) {
+      loginError.style.display = 'none';
+      alert('Login successful!');
+      showSection('home');
+    } else {
+      loginError.textContent = 'Invalid email or password.';
+      loginError.style.display = 'block';
+    }
+  });
+
+  // Register form submission
+  registerForm.addEventListener('submit', e => {
+    e.preventDefault();
+    const name = registerForm['register-name'].value.trim();
+    const email = registerForm['register-email'].value.trim();
+    const password = registerForm['register-password'].value.trim();
+
+    if (users.some(u => u.email === email)) {
+      registerError.textContent = 'Email already registered.';
+      registerError.style.display = 'block';
+    } else {
+      users.push({ name, email, password });
+      registerError.style.display = 'none';
+      alert('Registration successful! You can now login.');
+      showSection('login');
+    }
+  });
+
+  // Toggle between login and register
+  linkToRegister.addEventListener('click', () => showSection('register'));
+  linkToLogin.addEventListener('click', () => showSection('login'));
+
+  // Initialize app
+  showSection('home');
+  updateCartCount();
+</script>
+
+<style>
+  /* Reset */
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f6f9fc;
+    color: #333;
+  }
+
+  header {
+    background-color: #0e7ac4; /* Soft blue like Souq */
+    color: white;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  header h1 {
+    font-weight: bold;
+  }
+
+  nav a {
+    color: white;
+    margin-left: 1.2rem;
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+  }
+
+  nav a:hover {
+    text-decoration: underline;
+  }
+
+  main {
+    max-width: 1100px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+  }
+
+  section {
+    margin-bottom: 3rem;
+  }
+
+  h2, h3 {
+    margin-bottom: 1rem;
+    color: #074a7a; /* Darker blue */
+  }
+
+  .category-title {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    color: #0e7ac4;
+    border-bottom: 2px solid #0e7ac4;
+    padding-bottom: 0.3rem;
+  }
+
+  .products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(180px,1fr));
+    gap: 1rem;
+  }
+
+  .product {
+    background: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.12);
+    padding: 1rem;
+    text-align: center;
+  }
+
+  .product img {
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-bottom: 0.7rem;
+  }
+
+  .product h4 {
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin-bottom: 0.3rem;
+  }
+
+  .product p {
+    color: #0078d7;
+    font-weight: 600;
+    margin-bottom: 0.7rem;
+  }
+
+  button, .form-btn {
+    background-color: #0e7ac4;
+    border: none;
+    color: white;
+    padding: 0.5rem 1.2rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+  }
+
+  button:hover, .form-btn:hover {
+    background-color: #095a8a;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1rem;
+  }
+
+  th, td {
+    padding: 0.8rem;
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+  }
+
+  th {
+    background-color: #0e7ac4;
+    color: white;
+  }
+
+  input[type=number] {
+    width: 60px;
+    padding: 0.2rem;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    text-align: center;
+  }
+
+  form label {
+    display: block;
+    margin-bottom: 0.4rem;
+    font-weight: 600;
+    color: #074a7a;
+  }
+
+  form input {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+  }
+
+  .error-msg {
+    color: #d93025;
+    margin-bottom: 1rem;
+    font-weight: 600;
+  }
+
+  .toggle-link {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    color: #0e7ac4;
+    cursor: pointer;
+  }
+
+  .toggle-link span {
+    font-weight: 700;
+    text-decoration: underline;
+  }
+</style>
